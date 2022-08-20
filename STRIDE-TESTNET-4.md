@@ -1,8 +1,6 @@
 <h1 align="center">STRIDE-TESTNET-4 </h1>
 
-## Selamlar, yayında  bahsettiğim gibi yeni ağa geçtik, önceden kurmayanlar katılamıyor. uzatmamak için hızlıca anlatıyorum.
-
-# binary:
+## binary:
 
 ```
 sudo systemctl stop strided
@@ -41,9 +39,7 @@ sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.stride/c
 strided tendermint unsafe-reset-all --home $HOME/.stride
 ```
 
-# Kamon:
-
-* loglar akıyorrrr
+# Logları Başlatma:
 
 ```
 sudo systemctl start strided 
@@ -52,7 +48,7 @@ sudo systemctl start strided
 journalctl -fu strided -o cat
 ```
 
-## cüzdanınıda ki tokenleri kontrol et
+## cüzdandaki tokenleri kontrol et
 ```
 strided query bank balances STRIDECÜZDANADRESİ
 ```
@@ -75,6 +71,4 @@ strided tx staking create-validator \
 --details="https://linktr.ee/ruesandora0" \
 -y
 ```
-
-# e hadi hayırlı olsun bea
 
